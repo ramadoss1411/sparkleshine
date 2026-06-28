@@ -419,48 +419,6 @@
       font-size: 18px; color: rgba(15,122,61,0.35); z-index: 1;
     }
 
-    /* ========== TESTIMONIALS ========== */
-    #testimonials { background: var(--dark); position: relative; overflow: hidden; }
-    .testimonials-bg {
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(15,122,61,0.15) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(76,175,80,0.08) 0%, transparent 60%);
-    }
-    #testimonials .section-title { color: #fff; }
-    #testimonials .section-desc { color: rgba(255,255,255,0.6); }
-    .testimonial-carousel { position: relative; margin-top: 52px; }
-    .testimonial-track { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(.4,0,.2,1); }
-    .testimonial-card {
-      min-width: calc(33.33% - 16px); background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px; padding: 36px 32px;
-      transition: transform var(--transition), border-color var(--transition);
-    }
-    .testimonial-card:hover { transform: translateY(-4px); border-color: rgba(15,122,61,0.5); }
-    .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; margin-bottom: 18px; }
-    .testimonial-text { color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 0.95rem; margin-bottom: 24px; font-style: italic; }
-    .testimonial-author { display: flex; align-items: center; gap: 14px; }
-    .author-avatar {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--green2));
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 16px; color: #fff;
-      flex-shrink: 0;
-    }
-    .author-name { font-weight: 700; color: #fff; font-size: 0.95rem; }
-    .author-company { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
-    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 36px; }
-    .carousel-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
-      color: #fff; cursor: pointer; font-size: 18px;
-      display: flex; align-items: center; justify-content: center;
-      transition: background var(--transition), transform var(--transition);
-    }
-    .carousel-btn:hover { background: var(--green); transform: scale(1.05); }
-    .carousel-dots { display: flex; gap: 8px; }
-    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: background var(--transition), width var(--transition); }
-    .carousel-dot.active { background: var(--green); width: 24px; border-radius: 4px; }
 
     /* ========== CONTACT ========== */
     #contact { background: var(--light-green-bg); }
@@ -620,7 +578,7 @@
       .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: center; padding: 24px 0; gap: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 999; }
       .nav-links.open { display: flex; }
       .nav-hamburger { display: flex; }
-      .testimonial-card { min-width: calc(100% - 0px); }
+
     }
     @media (max-width: 600px) {
       section { padding: 70px 5vw; }
@@ -652,7 +610,7 @@
     <a href="#services">Services</a>
     <a href="#why">Why Us</a>
     <a href="#process">Process</a>
-    <a href="#testimonials">Reviews</a>
+
     <a href="#contact" class="nav-cta">Contact Us</a>
   </div>
   <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Open menu">
@@ -692,24 +650,7 @@
         <a href="#contact" class="btn-primary">📞 Contact Us</a>
         <a href="#services" class="btn-outline">🔍 Explore Services</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">500+</div>
-          <div class="lbl">Projects Done</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">100+</div>
-          <div class="lbl">Happy Clients</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">24/7</div>
-          <div class="lbl">Support</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">100%</div>
-          <div class="lbl">Satisfaction</div>
-        </div>
-      </div>
+
     </div>
     <div class="hero-right" aria-hidden="true">
       <div class="hero-img-wrap">
@@ -722,20 +663,7 @@
           <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 32px);"></div>
         </div>
       </div>
-      <div class="hero-float-card c1">
-        <div class="fc-icon green">🏆</div>
-        <div class="fc-text">
-          <div class="fc-val">ISO Certified</div>
-          <div class="fc-lbl">Quality Assured</div>
-        </div>
-      </div>
-      <div class="hero-float-card c2">
-        <div class="fc-icon gold">⭐</div>
-        <div class="fc-text">
-          <div class="fc-val">5.0 Rating</div>
-          <div class="fc-lbl">100+ Reviews</div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -774,10 +702,7 @@
     <div class="about-grid">
       <div class="about-img-mosaic reveal-left" aria-hidden="true">
         <div class="about-img-main">🏢</div>
-        <div class="about-badge">
-          <span class="ab-num">10+</span>
-          <span class="ab-lbl">Years of<br/>Excellence</span>
-        </div>
+
       </div>
       <div class="reveal-right">
         <div class="section-eyebrow">Who We Are</div>
@@ -802,24 +727,7 @@
             <p>Integrity, professionalism, sustainability, and customer-first approach guide everything we do.</p>
           </div>
         </div>
-        <div class="about-stats">
-          <div class="astat">
-            <div class="num"><span class="counter-num" data-target="500">0</span>+</div>
-            <div class="lbl">Projects Completed</div>
-          </div>
-          <div class="astat">
-            <div class="num"><span class="counter-num" data-target="100">0</span>+</div>
-            <div class="lbl">Happy Customers</div>
-          </div>
-          <div class="astat">
-            <div class="num">24/7</div>
-            <div class="lbl">Support Available</div>
-          </div>
-          <div class="astat">
-            <div class="num"><span class="counter-num" data-target="100">0</span>%</div>
-            <div class="lbl">Customer Satisfaction</div>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -941,13 +849,13 @@
         <div class="why-check">✓</div>
         <div class="why-icon-wrap">🤝</div>
         <h4>Trusted Service</h4>
-        <p>A proven track record of reliability, discretion and professionalism trusted by 100+ clients.</p>
+        <p>A commitment to reliability, discretion and professionalism that you can count on every single time.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-check">✓</div>
         <div class="why-icon-wrap">😊</div>
         <h4>Customer Satisfaction</h4>
-        <p>100% satisfaction commitment — we don't leave until you're completely happy with the work.</p>
+        <p>We don't leave until you're completely happy — your satisfaction is our top priority on every job.</p>
       </div>
     </div>
   </div>
@@ -996,81 +904,7 @@
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
-  <div class="testimonials-bg" aria-hidden="true"></div>
-  <div class="container" style="position:relative;z-index:2;">
-    <div class="text-center">
-      <div class="section-eyebrow video-eyebrow reveal">Client Reviews</div>
-      <h2 class="section-title reveal">What Our <em style="color:var(--gold);">Clients Say</em></h2>
-      <p class="section-desc reveal">Trusted by leading businesses and homeowners across Singapore — here's what they have to say about Sparkle Shine Facility.</p>
-    </div>
-    <div class="testimonial-carousel reveal">
-      <div class="testimonial-track" id="testimonialTrack">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Outstanding cleaning service and highly professional team. Sparkle Shine transformed our office space completely. Their attention to detail is second to none. Highly recommended for any business in Singapore!"</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JL</div>
-            <div>
-              <div class="author-name">Jennifer Lim</div>
-              <div class="author-company">Operations Manager, Tech Corp Pte Ltd</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Reliable facility management company in Singapore. We've been using Sparkle Shine for over 2 years and have never been disappointed. Their team is always punctual, thorough and courteous."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">DT</div>
-            <div>
-              <div class="author-name">David Tan</div>
-              <div class="author-company">Facility Director, Marina Bay Hotels</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Excellent housekeeping and maintenance support. Our condominium complex has never looked better. The landscaping team in particular does a wonderful job keeping our gardens immaculate."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SW</div>
-            <div>
-              <div class="author-name">Sarah Wong</div>
-              <div class="author-company">Property Manager, Orchard Residences</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We called Sparkle Shine for emergency plumbing and electrical works — they responded within 2 hours and resolved everything professionally. Their 24/7 support is genuinely impressive."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RA</div>
-            <div>
-              <div class="author-name">Ravi Arumugam</div>
-              <div class="author-company">CEO, Precision Manufacturing Ltd</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The carpet shampoo cleaning service brought our old office carpets back to life! We were about to replace them entirely, but Sparkle Shine saved us thousands. Truly professional service."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">ML</div>
-            <div>
-              <div class="author-name">Michelle Lee</div>
-              <div class="author-company">HR Manager, Global Finance Group</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Previous testimonial">‹</button>
-        <div class="carousel-dots" id="carouselDots"></div>
-        <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Next testimonial">›</button>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ===== CONTACT ===== -->
 <section id="contact">
@@ -1205,7 +1039,7 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#process">Our Process</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
@@ -1312,45 +1146,6 @@
     }
   }
 
-  /* ===== TESTIMONIAL CAROUSEL ===== */
-  let currentSlide = 0;
-  const totalSlides = 5;
-  const visibleSlides = window.innerWidth > 900 ? 3 : 1;
-
-  function buildDots() {
-    const dots = document.getElementById('carouselDots');
-    dots.innerHTML = '';
-    const pages = totalSlides - visibleSlides + 1;
-    for (let i = 0; i < pages; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.onclick = () => goToSlide(i);
-      dots.appendChild(dot);
-    }
-  }
-
-  function goToSlide(index) {
-    const vis = window.innerWidth > 900 ? 3 : 1;
-    const maxSlide = totalSlides - vis;
-    currentSlide = Math.max(0, Math.min(index, maxSlide));
-    const track = document.getElementById('testimonialTrack');
-    const cardWidth = track.querySelector('.testimonial-card').offsetWidth + 24;
-    track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-    document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-  }
-
-  function moveCarousel(dir) { goToSlide(currentSlide + dir); }
-
-  buildDots();
-  window.addEventListener('resize', () => { buildDots(); goToSlide(0); });
-
-  // Auto-advance
-  let autoCarousel = setInterval(() => moveCarousel(1), 5000);
-  document.getElementById('testimonialTrack').addEventListener('mouseenter', () => clearInterval(autoCarousel));
-  document.getElementById('testimonialTrack').addEventListener('mouseleave', () => {
-    clearInterval(autoCarousel);
-    autoCarousel = setInterval(() => moveCarousel(1), 5000);
-  });
 
   /* ===== FORM SUBMIT ===== */
   function handleFormSubmit(e) {
